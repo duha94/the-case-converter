@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react"
 import "./App.css";
 
 export default function CaseConverter() {
@@ -212,6 +213,7 @@ export default function CaseConverter() {
           </script>
         </div>
       </div>
+      <Analytics />
     </div>
   );
 }
