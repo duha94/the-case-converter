@@ -64,12 +64,21 @@ export default function CaseConverter() {
         {/* Left Sidebar for Ads */}
         <div className="hidden lg:block w-1/6 px-2">
           <ins className="adsbygoogle"
-            style={{display:"block"}}
+            style={{display:"block", height:"400px", width: "200px"}}
             data-ad-client="ca-pub-7570456293625857"
             data-ad-slot="3388266038"
             data-ad-format="auto"
             data-full-width-responsive="true">
           </ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+          <ins className="adsbygoogle"
+            style={{display:"block", height:"400px", width: "200px"}}
+            data-ad-client="ca-pub-7570456293625857"
+            data-ad-slot="5336375165"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
           <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
@@ -179,7 +188,7 @@ export default function CaseConverter() {
           </button>
           {/* Footer  */}
           <ins className="adsbygoogle"
-            style={{display:"block"}}
+            style={{display:"block", height:"400px", width: "700px"}}
             data-ad-client="ca-pub-7570456293625857"
             data-ad-slot="7672724466"
             data-ad-format="auto"
@@ -192,11 +201,21 @@ export default function CaseConverter() {
         {/* Right Sidebar for Ads */}
         <div className="hidden lg:block w-1/6 px-2">
           <ins className="adsbygoogle"
-            style={{display:"block", width:"140px", height:"300px"}}
+            style={{display:"block", height:"400px", width: "200px"}}
             data-ad-client="ca-pub-7570456293625857"
             data-ad-slot="6929115288"></ins>
           <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+          {/* Right Side2 */}
+          <ins className="adsbygoogle"
+              style={{display:"block", height:"400px", width: "200px"}}
+              data-ad-client="ca-pub-7570456293625857"
+              data-ad-slot="3200294271"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
         </div>
       </div>
