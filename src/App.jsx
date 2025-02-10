@@ -13,7 +13,7 @@ export default function CaseConverter() {
     adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
     adsScript.async = true;
     adsScript.crossOrigin = "anonymous";
-    adsScript.setAttribute("data-ad-client", "ca-pub-7570456293625857");
+    adsScript.setAttribute("data-ad-client", process.env.REACT_APP_ADS_PUBLIC_KEY);
     document.body.appendChild(adsScript);
     return () => {
       document.body.removeChild(adsScript);
@@ -77,7 +77,7 @@ export default function CaseConverter() {
         <div className="hidden lg:block w-1/6 px-2">
           <ins className="adsbygoogle"
             style={{display:"block"}}
-            data-ad-client="ca-pub-7570456293625857"
+            data-ad-client={process.env.REACT_APP_ADS_PUBLIC_KEY}
             data-ad-slot="3388266038"
             data-ad-format="auto"
             data-full-width-responsive="true">
@@ -192,7 +192,7 @@ export default function CaseConverter() {
           {/* Footer  */}
           <ins className="adsbygoogle"
             style={{display:"block"}}
-            data-ad-client="ca-pub-7570456293625857"
+            data-ad-client={process.env.REACT_APP_ADS_PUBLIC_KEY}
             data-ad-slot="7672724466"
             data-ad-format="auto"
             data-full-width-responsive="true">
@@ -205,7 +205,7 @@ export default function CaseConverter() {
         <div className="hidden lg:block w-1/6 px-2">
           <ins className="adsbygoogle"
             style={{display:"block", width:"140px", height:"300px"}}
-            data-ad-client="ca-pub-7570456293625857"
+            data-ad-client={process.env.REACT_APP_ADS_PUBLIC_KEY}
             data-ad-slot="6929115288"></ins>
           <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
