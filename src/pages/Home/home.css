@@ -1,0 +1,97 @@
+.container{
+  width: 1440px;
+  max-width: none;
+  background-color: #fff;
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  background-color: #F1F5F9;
+}
+
+.actions-container{
+  width: 300px;
+  text-align: left;
+  color: #475569;
+  font-size: 16px;
+  font-weight: 700;
+  max-height: 430px;
+  padding: 20px 12px;
+  border-radius: 16px;
+  background: #F1F5F9;
+  letter-spacing: -0.112px;
+  font-family: "Plus Jakarta Sans";
+}
+.actions-container li{
+  margin-bottom: 0;
+  padding-top: 10.5px;
+  padding-bottom: 10.5px;
+  padding-left: 12px;
+}
+.actions-container li.active{
+  border-radius: 1234px;
+  padding-left: 10px;
+  padding-top: 10px;
+  background: var(--gray-0-white, #FFF);
+  /* Shadow/md */
+  box-shadow: 0px 4px 8px -2px rgba(23, 23, 23, 0.10), 0px 2px 4px -2px rgba(23, 23, 23, 0.06);
+}
+.main-content{
+  padding-top: 0;
+}
+
+textarea{
+  outline: none;
+  color: #475569;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  border-radius: 12px;
+  background: var(--gray-0-white, #FFF);
+  border: 1px solid var(--Gray-30, #CBD5E1);
+}
+.counting-section{
+  color: #475569;
+  align-items: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.084px;
+}
+.seperater{
+  width: 1px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #475569;
+}
+.find-and-replace {
+  flex-direction: column;
+}
+.find-and-replace .title{
+  color: #1E293B;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 8px;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.084px;
+  font-family: "Plus Jakarta Sans";
+}
+input{
+  display: flex;
+  min-height: 48px;
+  padding: 12px;
+  align-items: center;
+  gap: 12px;
+  color: #475569;
+  align-self: stretch;
+  border-radius: 123px;
+  text-align: left;
+  flex-direction: column;
+  border: 1px solid var(--Gray-30, #CBD5E1);
+  background: var(--gray-0-white, #FFF);
+}
