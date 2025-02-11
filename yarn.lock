@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@esbuild/darwin-x64@0.24.2":
-  "integrity" "sha512-WeSrmwwHaPkNR5H3yYfowhZcbriGqooyu3zI/3GGpF8AyUdsrrP0X6KumITGA9WOyiJavnGZUwPGvxvwfWPHIA=="
-  "resolved" "https://registry.npmjs.org/@esbuild/darwin-x64/-/darwin-x64-0.24.2.tgz"
-  "version" "0.24.2"
-
 "@eslint-community/eslint-utils@^4.2.0":
   "integrity" "sha512-s3O3waFUrMV8P/XaF/+ZTp1X9XBZW1a4B97ZnjQF2KYWaFD2A8KyFBsrsfSjEmjn3RGWAIuvlneuZm3CUK3jbA=="
   "resolved" "https://registry.npmjs.org/@eslint-community/eslint-utils/-/eslint-utils-4.4.1.tgz"
@@ -204,11 +199,6 @@
   "integrity" "sha512-MYsBzfPki4gthY5HnYN7jgInhAZ7Ac1cYDoRWFomwGHWEX7odTEzbtg9kf/QSo7XEsEAqlQugA6gJ2WS2DEa3g=="
   "resolved" "https://registry.npmjs.org/@vercel/analytics/-/analytics-1.5.0.tgz"
   "version" "1.5.0"
-
-"@vercel/speed-insights@^1.2.0":
-  "integrity" "sha512-y9GVzrUJ2xmgtQlzFP2KhVRoCglwfRQgjyfY607aU0hh0Un6d0OUyrJkjuAlsV18qR4zfoFPs/BiIj9YDS6Wzw=="
-  "resolved" "https://registry.npmjs.org/@vercel/speed-insights/-/speed-insights-1.2.0.tgz"
-  "version" "1.2.0"
 
 "@vitejs/plugin-react-swc@^3.5.0":
   "integrity" "sha512-y0byko2b2tSVVf5Gpng1eEhX1OvPC7x8yns1Fx8jDzlJp4LS6CMkCPfLw47cjyoMrshQDoQw4qcgjsU9VvlCew=="

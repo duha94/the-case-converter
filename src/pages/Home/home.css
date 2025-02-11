@@ -1,7 +1,11 @@
 .container{
-  width: 1440px;
+  width: 100%;
+  /* width: 1440px; */
   max-width: none;
   background-color: #fff;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 }
 .header{
   display: flex;
@@ -9,6 +13,9 @@
   border-radius: 16px;
   margin-bottom: 24px;
   background-color: #F1F5F9;
+  @media (max-width: 1024px) {
+    padding: 16px;
+  }
 }
 
 .actions-container{
@@ -42,6 +49,39 @@
   padding-top: 0;
 }
 
+.content-container{
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+.sidebar{
+  /* display: flex; */
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+.copy-to-clipboard{
+  margin-right: 8px;
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+.mobile-copy-to-clipboard {
+  display: none;
+  @media (max-width: 1024px) {
+    display: inline-block;
+  }
+}
+.mobile-button{
+  display: none;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+  @media (max-width: 1024px) {
+    display: inline-block;
+  }
+}
+
 textarea{
   outline: none;
   color: #475569;
@@ -61,11 +101,13 @@ textarea{
   font-weight: 500;
   line-height: 20px; /* 142.857% */
   letter-spacing: -0.084px;
+  justify-content: space-between;
 }
 .seperater{
   width: 1px;
   height: 10px;
   margin: 0 5px;
+  display: inline-block;
   background-color: #475569;
 }
 .find-and-replace {
