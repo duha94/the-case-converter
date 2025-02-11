@@ -32,6 +32,7 @@
   font-family: "Plus Jakarta Sans";
 }
 .actions-container li{
+  cursor: pointer;
   margin-bottom: 0;
   padding-top: 10.5px;
   padding-bottom: 10.5px;
@@ -136,4 +137,10 @@ input{
   flex-direction: column;
   border: 1px solid var(--Gray-30, #CBD5E1);
   background: var(--gray-0-white, #FFF);
+}
+.footer-ad-ins{
+  @media (max-width: 1024px) {
+    width: 100% !important;
+    height: 300px !important;
+  }
 }

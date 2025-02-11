@@ -111,14 +111,14 @@ const Home = () => {
                     handleConversion(item.key);
                   }
                 }}
-                className={`case-option cursor-pointer hover:text-blue-500 pointer ${item.key === activeOption ? "active" : ''}`}
+                className={`case-option hover:text-blue-500 pointer ${item.key === activeOption ? "active" : ''}`}
               >
                 <h2 className='hidden'>{item.label}</h2>
                 {item.label}
               </li>
           )}
           </ul>
-          <div className="hidden lg:block w-1/6 px-2">
+          <div className="hidden lg:block px-2">
             <ins className="adsbygoogle"
               style={{display:"block", height:"400px", width: "200px"}}
               data-ad-client="ca-pub-7570456293625857"
@@ -178,7 +178,7 @@ const Home = () => {
                       handleConversion(item.key);
                     }
                   }}
-                  className={`case-option cursor-pointer mobile-button flex flex-wrap gap-2 mb-4 hover:text-blue-500 pointer ${item.key === activeOption ? "active" : ''}`}
+                  className={`case-option mobile-button flex flex-wrap gap-2 mb-4 hover:text-blue-500 pointer ${item.key === activeOption ? "active" : ''}`}
                 >
                   <h2 className='hidden'>{item.label}</h2>
                   {item.label}
@@ -209,7 +209,7 @@ const Home = () => {
           </div>
 
           {/* Footer  */}
-          <ins className="adsbygoogle"
+          <ins className="adsbygoogle footer-ad-ins"
             style={{display:"block", height:"400px", width: "700px"}}
             data-ad-client="ca-pub-7570456293625857"
             data-ad-slot="7672724466"
@@ -222,7 +222,7 @@ const Home = () => {
         </div>
 
         {/* Right Sidebar (Ads or Extra Content) */}
-        <div className="w-1/4 bg-white p-4 border-l">
+        <div className="hidden lg:block w-1/4 bg-white p-4 border-l">
           <ins className="adsbygoogle"
             style={{display:"block", height:"400px", width: "55%"}}
             data-ad-client="ca-pub-7570456293625857"
