@@ -4,4 +4,10 @@
 button{
   border-radius: 1234px;
   background: #1E293B;
+  @media (max-width: 1024px) {
+    font-size: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 25px;
+  }
 }

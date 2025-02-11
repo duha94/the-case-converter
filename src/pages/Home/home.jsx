@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from "../../assets/img/logo-with-text.svg";
+import greyCopyToClipboard from "../../assets/img/grey-content-copy.svg";
 import copyToClipboard from "../../assets/img/content-copy.svg";
 import { Button } from "../../components/ui/Button/Button";
 import {caseOptions} from './config';
@@ -97,8 +98,8 @@ const Home = () => {
         <h1 className='hidden'>the case converter</h1>
         <img className='logo' style={{width:'auto',height:'auto'}} src={logo} />
       </div>
-      <div className='main-contaiiner flex'>
-        <div>
+      <div className='content-container flex'>
+        <div className='sidebar'>
           <ul className="actions-container space-y-2">
           {caseOptions.map(
             (item) =>
@@ -149,13 +150,40 @@ const Home = () => {
             placeholder="Enter your text here..."
           ></textarea>
           <div className="flex mt-2 text-sm text-gray-500 counting-section">
-            <span>Character count: {charCount}</span>
-            <span className='seperater'/>
-            <span>Word count: {wordCount}</span>
+            <div>
+              <span>Character count: {charCount}</span>
+              <span className='seperater'/>
+              <span>Word count: {wordCount}</span>
+            </div>
+            <span className='mobile-copy-to-clipboard'>
+              <img src={greyCopyToClipboard} className='icon' onClick={handleCopyToClipboard}/>
+            </span>
           </div>
 
-          <div className="flex items-center mt-4 space-x-4 copy-to-clipboard">
-            <Button icon={copyToClipboard} onClick={handleCopyToClipboard}>Copy To Clipboard</Button>
+          <div className="flex flex-wrap items-center mt-4 gap-2">
+            <Button
+              className='copy-to-clipboard'
+              icon={copyToClipboard}
+              onClick={handleCopyToClipboard}
+            >
+              Copy To Clipboard
+            </Button>
+            {caseOptions.map(
+              (item) =>
+                <Button
+                  key={item.key}
+                  onClick={() => {
+                    if (inputText) {
+                      setActiveOption(item.key);
+                      handleConversion(item.key);
+                    }
+                  }}
+                  className={`case-option cursor-pointer mobile-button flex flex-wrap gap-2 mb-4 hover:text-blue-500 pointer ${item.key === activeOption ? "active" : ''}`}
+                >
+                  <h2 className='hidden'>{item.label}</h2>
+                  {item.label}
+                </Button>
+            )}
           </div>
 
           <div className="mt-6 text-left">
