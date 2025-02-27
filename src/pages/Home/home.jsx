@@ -19,7 +19,6 @@ const Home = () => {
 
   const handleCopyToClipboard = () => {
     navigator.clipboard.writeText(inputText);
-    alert("Copied to clipboard!");
   };
 
   // Conversion functions
@@ -98,79 +97,47 @@ const Home = () => {
         <h1 className='hidden'>the case converter</h1>
         <img className='logo' style={{width:'auto',height:'auto'}} src={logo} />
       </div>
-      <div className='content-container flex'>
-        <div className='sidebar'>
-          <ul className="actions-container space-y-2">
-          {caseOptions.map(
-            (item) =>
-              <li
-                key={item.key}
-                onClick={() => {
-                  if (inputText) {
-                    setActiveOption(item.key);
-                    handleConversion(item.key);
-                  }
-                }}
-                className={`case-option cursor-pointer hover:text-blue-500 pointer ${item.key === activeOption ? "active" : ''}`}
-              >
-                <h2 className='hidden'>{item.label}</h2>
-                {item.label}
-              </li>
-          )}
-          </ul>
-          <div className="hidden lg:block w-1/6 px-2">
-            <ins className="adsbygoogle"
-              style={{display:"block", height:"400px", width: "200px"}}
-              data-ad-client="ca-pub-7570456293625857"
-            data-ad-slot="3388266038"
-              data-ad-format="auto"
-              data-full-width-responsive="true">
-            </ins>
-            <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-            <ins className="adsbygoogle"
-              style={{display:"block", height:"400px", width: "200px"}}
-              data-ad-client="ca-pub-7570456293625857"
-              data-ad-slot="5336375165"
-              data-ad-format="auto"
-              data-full-width-responsive="true"></ins>
-            <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-          </div>
+      <div className='main-contaiiner flex'>
+        <div className="hidden lg:block w-1/6 px-2">
+          <ins className="adsbygoogle"
+            style={{display:"block", height:"400px", width: "200px"}}
+            data-ad-client="ca-pub-7570456293625857"
+          data-ad-slot="3388266038"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+          </ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+          <ins className="adsbygoogle"
+            style={{display:"block", height:"400px", width: "200px"}}
+            data-ad-client="ca-pub-7570456293625857"
+            data-ad-slot="5336375165"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
         </div>
-
         {/* Main Content */}
         <div className="main-content flex-1 p-6">
-          <textarea
-            className="w-full h-40 p-2 border rounded focus:outline-blue-500"
-            value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
-            placeholder="Enter your text here..."
-          ></textarea>
-          <div className="flex mt-2 text-sm text-gray-500 counting-section">
-            <div>
-              <span>Character count: {charCount}</span>
-              <span className='seperater'/>
-              <span>Word count: {wordCount}</span>
-            </div>
-            <span className='mobile-copy-to-clipboard'>
-              <img src={greyCopyToClipboard} className='icon' onClick={handleCopyToClipboard}/>
-            </span>
+          <ins className="adsbygoogle"
+            style={{display:"block"}}
+            data-ad-client="ca-pub-7570456293625857"
+            data-ad-slot="1579922979"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+          <div className="flex space-x-4 copy-to-clipboard" onClick={handleCopyToClipboard}>
+            <img src={copyToClipboard} />
+            {/* <Button icon={copyToClipboard} onClick={handleCopyToClipboard}>Copy To Clipboard</Button> */}
           </div>
-
-          <div className="flex flex-wrap items-center mt-4 gap-2">
-            <Button
-              className='copy-to-clipboard'
-              icon={copyToClipboard}
-              onClick={handleCopyToClipboard}
-            >
-              Copy To Clipboard
-            </Button>
+          <ul className="actions-container space-y-2">
             {caseOptions.map(
               (item) =>
-                <Button
+                <li
                   key={item.key}
                   onClick={() => {
                     if (inputText) {
@@ -178,39 +145,74 @@ const Home = () => {
                       handleConversion(item.key);
                     }
                   }}
-                  className={`case-option cursor-pointer mobile-button flex flex-wrap gap-2 mb-4 hover:text-blue-500 pointer ${item.key === activeOption ? "active" : ''}`}
+                  disabled={!inputText}
+                  className={`case-option cursor-pointer pointer ${item.key === activeOption ? "active" : ''}`}
                 >
                   <h2 className='hidden'>{item.label}</h2>
                   {item.label}
-                </Button>
+                </li>
             )}
+          </ul>
+          <textarea
+            className="w-full h-40 p-2 border rounded focus:outline-blue-500"
+            value={inputText}
+            onChange={(e) => setInputText(e.target.value)}
+            placeholder="Enter your text here..."
+          ></textarea>
+          <div className="flex mt-2 text-sm text-gray-500 counting-section items-center">
+            <div>
+              <span>Character count: {charCount}</span>
+              <span className='seperater'/>
+              <span>Word count: {wordCount}</span>
+            </div>
+            {/* <div className="flex space-x-4 copy-to-clipboard" onClick={handleCopyToClipboard}>
+              <img src={copyToClipboard} />
+              <Button icon={copyToClipboard} onClick={handleCopyToClipboard}>Copy To Clipboard</Button>
+            </div> */}
           </div>
 
           <div className="mt-6 text-left">
             <div className="flex space-x-4 mb-4 find-and-replace">
-              <h2 className='title'>Find Text</h2>
-              <input
-                type="text"
-                className="flex-1 p-2 border rounded mb-[24px]"
-                placeholder="Find Text"
-                value={findText}
-                onChange={(e) => setFindText(e.target.value)}
-              />
-              <h2 className='title'>Replace with</h2>
-              <input
-                type="text"
-                className="flex-1 p-2 border rounded mb-[24px]"
-                placeholder="Replace Text"
-                value={replaceText}
-                onChange={(e) => setReplaceText(e.target.value)}
-              />
+              <div>
+                <h2 className='title'>Find Text</h2>
+                <input
+                  type="text"
+                  className="flex-1 p-2 border rounded mb-[24px]"
+                  placeholder="Find Text"
+                  value={findText}
+                  onChange={(e) => setFindText(e.target.value)}
+                />
+              </div>
+              <div>
+                <h2 className='title'>Replace with</h2>
+                <input
+                  type="text"
+                  className="flex-1 p-2 border rounded mb-[24px]"
+                  placeholder="Replace Text"
+                  value={replaceText}
+                  onChange={(e) => setReplaceText(e.target.value)}
+                />
+              </div>
             </div>
             <Button onClick={handleFindAndReplace}>Find And Replace</Button>
           </div>
-
+          <section className='intro text-gray-500'>
+            <h1>Welcome to TheCaseConvert.com – Your Ultimate Text Case Converter!</h1>
+            <p>
+              Need to quickly change text case? Whether you want to convert text to 
+               <strong> uppercase, lowercase, sentence case, title case</strong>, or more, our tool makes it simple and instant. 
+              Just enter your text, select your desired format, and copy the results with one click.
+            </p>
+            <ul>
+              <li>✅ <strong>Fast & Free</strong> – No sign-up needed</li>
+              <li>✅ <strong>Accurate formatting</strong> for text, code, and documents</li>
+              <li>✅ <strong>Works on all devices</strong></li>
+            </ul>
+            <p><strong>Try it out now and format your text effortlessly!</strong></p>
+          </section>
           {/* Footer  */}
-          <ins className="adsbygoogle"
-            style={{display:"block", height:"400px", width: "700px"}}
+          <ins className="adsbygoogle footer-ad-ins"
+            style={{display:"block"}}
             data-ad-client="ca-pub-7570456293625857"
             data-ad-slot="7672724466"
             data-ad-format="auto"
@@ -219,10 +221,31 @@ const Home = () => {
           <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
+          <section className="faq text-gray-500">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+
+            <h3>1. What is TheCaseConvert.com?</h3>
+            <p>TheCaseConvert.com is a free online tool that helps users quickly convert text into various case formats, such as uppercase, lowercase, sentence case, title case, and more.</p>
+
+            <h3>2. How do I use this tool?</h3>
+            <p>Simply enter or paste your text into the input box, select the case format you need, and copy the converted text. It’s that simple!</p>
+
+            <h3>3. Is this tool free to use?</h3>
+            <p>Yes! Our tool is 100% free, with no hidden fees or sign-up required.</p>
+
+            <h3>4. Can I use this tool on my mobile device?</h3>
+            <p>Absolutely! TheCaseConvert.com is mobile-friendly and works on all devices, including phones, tablets, and desktops.</p>
+
+            <h3>5. Does this tool support different languages?</h3>
+            <p>Yes, you can input text in various languages, and the case formatting will work accordingly.</p>
+
+            <h3>6. Are there any limitations on how much text I can convert?</h3>
+            <p>No, you can convert as much text as you like without restrictions.</p>
+          </section>
         </div>
 
         {/* Right Sidebar (Ads or Extra Content) */}
-        <div className="w-1/4 bg-white p-4 border-l">
+        <div className="hidden lg:block w-1/4 bg-white p-4 border-l">
           <ins className="adsbygoogle"
             style={{display:"block", height:"400px", width: "55%"}}
             data-ad-client="ca-pub-7570456293625857"
