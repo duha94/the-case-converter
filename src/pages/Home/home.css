@@ -71,8 +71,8 @@
 }
 .copy-to-clipboard{
   position: absolute;
-  right: 30px;
-  padding-top: 70px;
+  right: 15px;
+  padding-top: 110px;
   @media (max-width: 1024px) {
     padding-top: 150px;
   }

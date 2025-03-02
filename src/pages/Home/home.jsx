@@ -99,7 +99,7 @@ const Home = () => {
       </div>
       <div className='main-contaiiner flex'>
         <div className="hidden lg:block w-1/6 px-2">
-          <ins className="adsbygoogle"
+          {/* <ins className="adsbygoogle"
             style={{display:"block", height:"400px", width: "200px"}}
             data-ad-client="ca-pub-7570456293625857"
           data-ad-slot="3388266038"
@@ -117,10 +117,10 @@ const Home = () => {
             data-full-width-responsive="true"></ins>
           <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
+          </script> */}
         </div>
         {/* Main Content */}
-        <div className="main-content flex-1 p-6">
+        <div className="main-content flex-1">
           <ins className="adsbygoogle"
             style={{display:"block"}}
             data-ad-client="ca-pub-7570456293625857"
@@ -246,14 +246,13 @@ const Home = () => {
 
         {/* Right Sidebar (Ads or Extra Content) */}
         <div className="hidden lg:block w-1/4 bg-white p-4 border-l">
-          <ins className="adsbygoogle"
+          {/* <ins className="adsbygoogle"
             style={{display:"block", height:"400px", width: "55%"}}
             data-ad-client="ca-pub-7570456293625857"
             data-ad-slot="6929115288"></ins>
           <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
-          {/* Right Side2 */}
           <ins className="adsbygoogle"
             style={{display:"block", height:"400px", width: "55%"}}
             data-ad-client="ca-pub-7570456293625857"
@@ -262,7 +261,7 @@ const Home = () => {
             data-full-width-responsive="true"></ins>
           <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
+          </script> */}
         </div>
       </div>
     </div>
